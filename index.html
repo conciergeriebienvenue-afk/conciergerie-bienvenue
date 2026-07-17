@@ -3,17 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Conciergerie Airbnb Morbihan - Vannes, Auray, Carnac | Conciergerie Bienvenue</title>
-<meta name="description" content="Conciergerie et gestion locative Airbnb dans le Golfe du Morbihan : ménage, check-in, maintenance, linge. Commission de 20%. Vannes, Auray, Carnac et alentours.">
+<title>Conciergerie Airbnb Golfe du Morbihan &amp; Baie de Quiberon | Conciergerie Bienvenue</title>
+<meta name="description" content="Conciergerie et gestion locative Airbnb dans le Golfe du Morbihan et la Baie de Quiberon : ménage, check-in, maintenance, linge. Commission de 20%.">
 <link rel="canonical" href="https://www.conciergeriebienvenue.com/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Conciergerie Airbnb Morbihan - Vannes, Auray, Carnac | Conciergerie Bienvenue">
-<meta property="og:description" content="Conciergerie et gestion locative Airbnb dans le Golfe du Morbihan : ménage, check-in, maintenance, linge. Commission de 20%. Vannes, Auray, Carnac et alentours.">
+<meta property="og:title" content="Conciergerie Airbnb Golfe du Morbihan &amp; Baie de Quiberon | Conciergerie Bienvenue">
+<meta property="og:description" content="Conciergerie et gestion locative Airbnb dans le Golfe du Morbihan et la Baie de Quiberon : ménage, check-in, maintenance, linge. Commission de 20%.">
 <meta property="og:url" content="https://www.conciergeriebienvenue.com/">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Conciergerie Bienvenue">
+<meta property="og:image" content="https://www.conciergeriebienvenue.com/assets/logo.png">
+<meta name="twitter:image" content="https://www.conciergeriebienvenue.com/assets/logo.png">
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="icon" href="assets/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/logo.png">
+<meta name="theme-color" content="#0D0848">
 <link rel="stylesheet" href="css/style.css">
 <script type="application/ld+json">
 {
@@ -21,14 +26,25 @@
   "@type": "LocalBusiness",
   "name": "Conciergerie Bienvenue",
   "url": "https://www.conciergeriebienvenue.com",
+  "telephone": "+33661081083",
+  "email": "contact@conciergeriebienvenue.com",
   "description": "Conciergerie et gestion locative Airbnb dans le Golfe du Morbihan : Vannes, Auray, Carnac et alentours.",
-  "areaServed": ["Vannes", "Arradon", "Auray", "Baden", "Carnac", "Crac'h", "La Trinité-sur-Mer", "Larmor-Baden", "Le Bono", "Locmariaquer", "Ploëmel", "Plouharnel", "Saint-Philibert"],
+  "areaServed": ["Vannes", "Arradon", "Auray", "Baden", "Carnac", "Crac'h", "La Trinité-sur-Mer", "Larmor-Baden", "Le Bono", "Locmariaquer", "Ploëmel", "Saint-Philibert"],
   "address": {
     "@type": "PostalAddress",
     "addressRegion": "Morbihan",
     "addressCountry": "FR"
   },
-  "email": "contact@conciergeriebienvenue.com",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "53"
+  },
+  "sameAs": [
+    "https://www.google.com/maps/place/Conciergerie+Bienvenue+%7C+Vannes+-+Auray+-+Carnac/@47.6645955,-2.7399027,17z/data=!3m1!4b1!4m6!3m5!1s0x848c781af3a90095:0xbd547a17f789b783!8m2!3d47.6645955!4d-2.7373278!16s%2Fg%2F11sff3z1vr?entry=ttu&g_ep=EgoyMDI2MDcwNS4wIKXMDSoASAFQAw%3D%3D",
+    "https://www.instagram.com/conciergeriebienvenue/",
+    "https://www.facebook.com/conciergeriebienvenue/"
+  ],
   "priceRange": "20% de commission"
 }
 </script>
@@ -36,23 +52,28 @@
 <body>
 <header class="site-header">
   <div class="nav-row">
-    <a href="index.html" class="logo"><span class="mark">&#9875;</span> Conciergerie Bienvenue</a>
-    <nav class="main-nav"><ul><li><a href="index.html" aria-current="page">Accueil</a></li><li><a href="vos-interlocuteurs.html">Vos interlocuteurs</a></li><li><a href="nos-villes.html">Nos villes</a></li><li><a href="estimez-vos-revenus.html">Estimez vos revenus</a></li></ul></nav>
-    <a href="estimez-vos-revenus.html" class="btn btn-ghost">Demander un devis</a>
+    <a href="index.html" class="logo"><img src="assets/logo.png" alt="Conciergerie Bienvenue" class="logo-img"></a>
+    <nav class="main-nav" id="mainNav"><ul><li><a href="index.html" aria-current="page">Accueil</a></li><li><a href="vos-interlocuteurs.html">Vos interlocuteurs</a></li><li><a href="nos-villes.html">Nos villes</a></li><li><a href="estimez-vos-revenus.html">Estimez vos revenus</a></li></ul></nav>
+    <div class="nav-actions">
+      <a href="tel:+33661081083" class="phone-cta"><span class="ico">&#9742;</span> <span class="full">06 61 08 10 83</span></a>
+      <a href="estimez-vos-revenus.html" class="btn btn-ghost">Demander un devis</a>
+      <button class="menu-toggle" onclick="document.getElementById('mainNav').classList.toggle('open')" aria-label="Ouvrir le menu">&#9776;</button>
+    </div>
   </div>
 </header>
 
 <section class="hero">
   <div class="container">
-    <span class="eyebrow">Conciergerie Airbnb &middot; Golfe du Morbihan</span>
-    <h1>Votre location saisonni&egrave;re g&eacute;r&eacute;e de A &agrave; Z, dans le Golfe du Morbihan</h1>
+    <span class="eyebrow">Conciergerie Bienvenue &middot; Golfe du Morbihan &amp; Baie de Quiberon</span>
+    <h1>Votre location saisonni&egrave;re g&eacute;r&eacute;e de A &agrave; Z, dans le Golfe du Morbihan et la Baie de Quiberon</h1>
     <p class="lead">Confiez la gestion de votre bien &agrave; une conciergerie locale, pour une commission de 20&nbsp;%. M&eacute;nage, check-in, maintenance, linge : nous nous occupons de tout, vous gardez les revenus.</p>
     <div class="hero-actions">
       <a href="estimez-vos-revenus.html" class="btn">Estimer mes revenus</a>
       <a href="vos-interlocuteurs.html" class="btn btn-ghost" style="background:transparent;color:#fff;border-color:rgba(255,255,255,0.5);">Rencontrer l'&eacute;quipe</a>
+      <a href="tel:+33661081083" class="phone-cta"><span class="ico">&#9742;</span> 06 61 08 10 83</a>
     </div>
   </div>
-  <div class="tide"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,30 C200,60 400,0 600,30 C800,60 1000,0 1200,30 L1200,60 L0,60 Z" fill="#F5F6F2"></path></svg></div>
+  <div class="tide"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,30 C200,60 400,0 600,30 C800,60 1000,0 1200,30 L1200,60 L0,60 Z" fill="#FFFFFF"></path></svg></div>
 </section>
 
 <section>
@@ -60,23 +81,39 @@
     <span class="eyebrow">Comment &ccedil;a marche</span>
     <h2>Trois &eacute;tapes, z&eacute;ro contrainte pour vous</h2>
     <div class="grid-3">
-      <div class="card"><span class="num">01</span><h3>On prend en main votre logement</h3><p>Visite, photos, mise en ligne et optimisation de votre annonce Airbnb pour maximiser les r&eacute;servations.</p></div>
-      <div class="card"><span class="num">02</span><h3>On g&egrave;re le quotidien</h3><p>Check-in, m&eacute;nage professionnel, linge de maison, petite maintenance : chaque s&eacute;jour est pris en charge.</p></div>
-      <div class="card"><span class="num">03</span><h3>Vous encaissez vos revenus</h3><p>Une commission unique de 20&nbsp;%, sans frais cach&eacute;s, et un reporting r&eacute;gulier sur l'activit&eacute; de votre bien.</p></div>
+      <div class="card"><span class="num">01</span><h3>Nous prenons en main votre logement</h3><p>Visite, photos, mise en ligne et optimisation de votre annonce Airbnb pour maximiser les r&eacute;servations.</p></div>
+      <div class="card"><span class="num">02</span><h3>Nous g&eacute;rons le quotidien</h3><p>Check-in, m&eacute;nage professionnel, linge de maison, petite maintenance : chaque s&eacute;jour est pris en charge.</p></div>
+      <div class="card"><span class="num">03</span><h3>Vous encaissez vos revenus</h3><p>Une commission unique de 20&nbsp;% pour mettre votre bien en location sans avoir &agrave; y consacrer du temps.</p></div>
     </div>
   </div>
 </section>
 
 <section class="alt">
+  <div class="container">
+    <span class="eyebrow">Nos comp&eacute;tences</span>
+    <h2>Nos 6 comp&eacute;tences cl&eacute;s</h2>
+    <div class="grid-3">
+      <div class="card"><svg class="competence-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="12" width="26" height="20" rx="2" stroke="currentColor" stroke-width="2"/><path d="M32 19l10-5v20l-10-5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M11 19h16M11 25h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><h3>Optimisation de l'annonce</h3><p>Cr&eacute;ation, r&eacute;daction et optimisation de votre annonce locative pour maximiser les r&eacute;servations.</p></div>
+      <div class="card"><svg class="competence-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 22 24 9l15 13" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13 20v16h22V20" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="24" cy="29" r="2.4" fill="currentColor"/></svg><h3>Accueil</h3><p>Accueil des voyageurs et remise des cl&eacute;s pour chaque s&eacute;jour.</p></div>
+      <div class="card"><svg class="competence-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.5 24V8Q20.5 4 24 4Q27.5 4 27.5 8V24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="8.5" r="1.8" stroke="currentColor" stroke-width="1.8"/><path d="M20.5 24C20.5 27 14 26 13 30M27.5 24C27.5 27 34 26 35 30" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 30H35" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M13 30 10 41M35 30 38 41" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 41Q24 44 38 41" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><h3>M&eacute;nage professionnel</h3><p>Un m&eacute;nage rigoureux entre chaque s&eacute;jour, pour des avis voyageurs irr&eacute;prochables.</p></div>
+      <div class="card"><svg class="competence-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="10" width="16" height="28" rx="2" stroke="currentColor" stroke-width="2"/><path d="M24 16h16v6a8 8 0 0 1-8 8h0" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 17h8M12 23h8M12 29h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><h3>Linge de qualit&eacute; h&ocirc;teli&egrave;re</h3><p>Fourniture de linge de lit et de serviettes de qualit&eacute; h&ocirc;teli&egrave;re.</p></div>
+      <div class="card"><svg class="competence-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 24a16 16 0 1 1 6 12.5L8 40l3.5-6.2A15.9 15.9 0 0 1 8 24Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="18" cy="24" r="1.8" fill="currentColor"/><circle cx="24" cy="24" r="1.8" fill="currentColor"/><circle cx="30" cy="24" r="1.8" fill="currentColor"/></svg><h3>Assistance et relation clients</h3><p>Disponibilit&eacute; et r&eacute;activit&eacute; aupr&egrave;s des voyageurs avant, pendant et apr&egrave;s leur s&eacute;jour.</p></div>
+      <div class="card"><svg class="competence-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M31 10a7 7 0 0 0-9.8 8.2L9 30.4V38h7.6l12.2-12.2A7 7 0 0 0 37 16l-5 5-4-4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><h3>Maintenance</h3><p>Suivi technique et petites interventions pour garder votre logement en parfait &eacute;tat.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
   <div class="container grid-2">
     <div>
       <span class="eyebrow">Qui sommes-nous</span>
       <h2>Une conciergerie locale, tenue par des gens du Morbihan</h2>
-      <p>Damien, ing&eacute;nieur de formation et exp&eacute;riment&eacute; dans les m&eacute;tiers du service, et Nolwenn, forte d'une exp&eacute;rience en recrutement et commerce, dirigent la Conciergerie Bienvenue depuis plus de 3 ans. Originaires du Morbihan, ils mettent leur organisation et leur r&eacute;activit&eacute; au service des h&ocirc;tes, pour offrir une exp&eacute;rience de qualit&eacute; aux voyageurs.</p>
+      <p>Damien, ing&eacute;nieur de formation et exp&eacute;riment&eacute; dans les m&eacute;tiers du service, et Nolwenn, forte d'une exp&eacute;rience en recrutement et commerce, dirigeons la Conciergerie Bienvenue depuis sa cr&eacute;ation en 2021. Originaires du Morbihan, nous mettons notre organisation et notre r&eacute;activit&eacute; au service de nos h&ocirc;tes, pour offrir une exp&eacute;rience de qualit&eacute; aux voyageurs.</p>
       <a href="vos-interlocuteurs.html" class="btn btn-ghost">D&eacute;couvrir l'&eacute;quipe</a>
     </div>
-    <div class="quote-block">
-      Partenaires du programme Co-h&ocirc;tes Exp&eacute;riment&eacute;s d'Airbnb, nous respectons des crit&egrave;res rigoureux de qualit&eacute; et d'hospitalit&eacute;.
+    <div class="quote-block airbnb-inline">
+      <img src="assets/airbnb-icon.png" alt="Airbnb" class="airbnb-inline-icon">
+      <span>Partenaires du programme Co-h&ocirc;tes Exp&eacute;riment&eacute;s d'Airbnb, nous respectons des crit&egrave;res rigoureux de qualit&eacute; et d'hospitalit&eacute;.</span>
     </div>
   </div>
 </section>
@@ -84,13 +121,42 @@
 <section>
   <div class="container">
     <span class="eyebrow">Zone d'intervention</span>
-    <h2>Nos villes dans le Golfe du Morbihan</h2>
+    <h2>Nos villes dans le Golfe du Morbihan et la Baie de Quiberon</h2>
     <p>Nous intervenons &agrave; Vannes, Auray, Carnac et dans les communes environnantes du Morbihan.</p>
-    <div class="town-list"><a href="nos-villes/vannes.html">Vannes</a><a href="nos-villes/arradon.html">Arradon</a><a href="nos-villes/auray.html">Auray</a><a href="nos-villes/baden.html">Baden</a><a href="nos-villes/carnac.html">Carnac</a><a href="nos-villes/crach.html">Crac'h</a><a href="nos-villes/la-trinite-sur-mer.html">La Trinité-sur-Mer</a><a href="nos-villes/larmor-baden.html">Larmor-Baden</a><a href="nos-villes/le-bono.html">Le Bono</a><a href="nos-villes/locmariaquer.html">Locmariaquer</a><a href="nos-villes/ploemel.html">Ploëmel</a><a href="nos-villes/plouharnel.html">Plouharnel</a><a href="nos-villes/saint-philibert.html">Saint-Philibert</a></div>
+    <div class="town-list"><a href="nos-villes/vannes.html">📍 Vannes</a><a href="nos-villes/arradon.html">📍 Arradon</a><a href="nos-villes/auray.html">📍 Auray</a><a href="nos-villes/baden.html">📍 Baden</a><a href="nos-villes/carnac.html">📍 Carnac</a><a href="nos-villes/crach.html">📍 Crac'h</a><a href="nos-villes/la-trinite-sur-mer.html">📍 La Trinité-sur-Mer</a><a href="nos-villes/larmor-baden.html">📍 Larmor-Baden</a><a href="nos-villes/le-bono.html">📍 Le Bono</a><a href="nos-villes/locmariaquer.html">📍 Locmariaquer</a><a href="nos-villes/ploemel.html">📍 Ploëmel</a><a href="nos-villes/saint-philibert.html">📍 Saint-Philibert</a></div>
   </div>
 </section>
 
 <section class="alt">
+  <div class="container">
+    <span class="eyebrow">En images</span>
+    <h2>Quelques-uns de nos logements</h2>
+    <p>Un aper&ccedil;u des int&eacute;rieurs que nous g&eacute;rons au quotidien pour nos propri&eacute;taires, dans le Golfe du Morbihan.</p>
+    <div class="photo-grid">
+      <img src="assets/photos/maison-piscine.jpg" alt="Maison contemporaine avec piscine, Golfe du Morbihan" loading="lazy">
+      <img src="assets/photos/cuisine.jpg" alt="Cuisine ouverte et lumineuse d'un logement g&eacute;r&eacute; par Conciergerie Bienvenue" loading="lazy">
+      <img src="assets/photos/grande-table-cheminee.jpg" alt="Grande salle &agrave; manger en pierre avec po&ecirc;le &agrave; bois" loading="lazy">
+      <img src="assets/photos/salon-bleu-jaune.jpg" alt="Salon d&eacute;coration bleu marine et moutarde" loading="lazy">
+      <img src="assets/photos/chambre-panda-girafe.jpg" alt="Chambre familiale color&eacute;e avec d&eacute;coration ludique" loading="lazy">
+      <img src="assets/photos/port-chambre.jpg" alt="Chambre avec vue sur un port du Golfe du Morbihan" loading="lazy">
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="container" style="text-align:center;">
+    <span class="eyebrow">Avis clients</span>
+    <h2>Ce que disent nos propri&eacute;taires sur Google</h2>
+    <div class="reviews-summary" style="justify-content:center;">
+      <span class="reviews-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span><b>5,0/5</b> &mdash; bas&eacute; sur 53 avis Google</span>
+    </div>
+    <p style="margin-top:14px;"><a href="https://www.google.com/maps/place/Conciergerie+Bienvenue+%7C+Vannes+-+Auray+-+Carnac/@47.6645955,-2.7399027,17z/data=!3m1!4b1!4m6!3m5!1s0x848c781af3a90095:0xbd547a17f789b783!8m2!3d47.6645955!4d-2.7373278!16s%2Fg%2F11sff3z1vr?entry=ttu&g_ep=EgoyMDI2MDcwNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="btn btn-ghost">Voir tous nos avis Google</a></p>
+  </div>
+</section>
+
+<section>
   <div class="container" style="text-align:center;">
     <h2>Envie d'estimer les revenus de votre logement&nbsp;?</h2>
     <p>R&eacute;ponse rapide, sans engagement.</p>
@@ -100,8 +166,13 @@
 <footer class="site-footer">
   <div class="container">
     <div>
-      <h4>Conciergerie Bienvenue</h4>
+      <div class="footer-logo-badge"><img src="assets/logo-blanc.png" alt="Conciergerie Bienvenue"></div>
       <p>Gestion locative et conciergerie Airbnb dans le Golfe du Morbihan &mdash; Vannes, Auray, Carnac et leurs alentours. Partenaires du programme Co-h&ocirc;tes Exp&eacute;riment&eacute;s d'Airbnb.</p>
+      <div class="footer-social-icons">
+        <a href="https://www.instagram.com/conciergeriebienvenue/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg></a>
+        <a href="https://www.facebook.com/conciergeriebienvenue/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.5 21v-7.6h2.6l.4-3h-3V8.4c0-.87.24-1.46 1.5-1.46H17.7V4.2C17.4 4.16 16.46 4 15.36 4c-2.3 0-3.87 1.4-3.87 3.98v2.42H8.9v3h2.6V21h3z" fill="currentColor"/></svg></a>
+        <a href="https://www.airbnb.com/co-hosts/profile/1034747293981043492?source=REFERRAL" target="_blank" rel="noopener" aria-label="Airbnb" title="Profil Co-h&ocirc;te Airbnb"><img src="assets/airbnb-icon.png" alt="Airbnb" style="height:18px;width:auto;"></a>
+      </div>
     </div>
     <div>
       <h4>Navigation</h4>
@@ -112,15 +183,23 @@
       </ul>
     </div>
     <div>
+      <h4>Ressources</h4>
+      <ul>
+        <li><a href="informations-utiles/les-essentiels-pour-louer-sur-airbnb.html">Les essentiels Airbnb</a></li>
+        <li><a href="les-demarches-pour-louer-sur-airbnb.html">Les d&eacute;marches Airbnb</a></li>
+      </ul>
+    </div>
+    <div>
       <h4>Contact</h4>
       <ul>
+        <li><a href="tel:+33661081083">06 61 08 10 83</a></li>
         <li><a href="mailto:contact@conciergeriebienvenue.com">contact@conciergeriebienvenue.com</a></li>
         <li>Golfe du Morbihan, Bretagne</li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; 2026 Conciergerie Bienvenue. Tous droits r&eacute;serv&eacute;s.</span>
+    <span>&copy; 2026 Conciergerie Bienvenue &mdash; SAS &mdash; SIRET 904 169 570 00028. Tous droits r&eacute;serv&eacute;s.</span>
     <span><a href="mentions-legales.html">Mentions l&eacute;gales</a></span>
   </div>
 </footer>
