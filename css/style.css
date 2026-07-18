@@ -437,7 +437,9 @@ footer.site-footer ul { list-style: none; padding: 0; margin: 0; display: grid; 
   border: 1px solid rgba(255,255,255,0.25);
 }
 .footer-social-icons a:hover { background: var(--rope); border-color: var(--rope); }
-.footer-social-icons img { width: 18px; height: 18px; }
+.footer-social-icons img,
+.footer-social-icons svg { width: 18px; height: 18px; color: rgba(255,255,255,0.85); }
+.footer-social-icons a:hover svg { color: var(--white); }
 
 .competence-icon {
   width: 44px;
