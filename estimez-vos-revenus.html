@@ -53,6 +53,9 @@
       <div class="town-list"><a href="nos-villes/vannes.html">📍 Vannes</a><a href="nos-villes/arradon.html">📍 Arradon</a><a href="nos-villes/auray.html">📍 Auray</a><a href="nos-villes/baden.html">📍 Baden</a><a href="nos-villes/carnac.html">📍 Carnac</a><a href="nos-villes/crach.html">📍 Crac'h</a><a href="nos-villes/la-trinite-sur-mer.html">📍 La Trinité-sur-Mer</a><a href="nos-villes/larmor-baden.html">📍 Larmor-Baden</a><a href="nos-villes/le-bono.html">📍 Le Bono</a><a href="nos-villes/locmariaquer.html">📍 Locmariaquer</a><a href="nos-villes/ploemel.html">📍 Ploëmel</a><a href="nos-villes/saint-philibert.html">📍 Saint-Philibert</a></div>
     </div>
     <form class="quote-form" id="quoteForm">
+      <input type="hidden" name="access_key" value="8fa6e7b3-47d2-41ea-867b-1fc164dac02c">
+      <input type="hidden" name="subject" value="Nouvelle demande d'estimation - Conciergerie Bienvenue">
+      <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
       <div>
         <label for="nom">Nom</label>
         <input type="text" id="nom" name="nom" required>
@@ -71,23 +74,45 @@
         <label for="message">Votre logement (type, capacit&eacute;, particularit&eacute;s)</label>
         <textarea id="message" name="message"></textarea>
       </div>
-      <button type="submit" class="btn">Envoyer ma demande</button>
+      <button type="submit" class="btn" id="quoteSubmitBtn">Envoyer ma demande</button>
+      <p id="quoteFormResult" style="margin-top:10px;font-weight:600;"></p>
     </form>
     <script>
       document.getElementById('quoteForm').addEventListener('submit', function(e) {
         e.preventDefault();
-        var nom = document.getElementById('nom').value;
-        var email = document.getElementById('email').value;
-        var ville = document.getElementById('ville').value;
-        var message = document.getElementById('message').value;
-        var sujet = 'Demande d\'estimation - ' + ville;
-        var corps = 'Nom : ' + nom + '\n' +
-                    'E-mail : ' + email + '\n' +
-                    'Commune du bien : ' + ville + '\n\n' +
-                    'Message :\n' + message;
-        window.location.href = 'mailto:conciergeriebienvenue@gmail.com' +
-          '?subject=' + encodeURIComponent(sujet) +
-          '&body=' + encodeURIComponent(corps);
+        var form = e.target;
+        var btn = document.getElementById('quoteSubmitBtn');
+        var result = document.getElementById('quoteFormResult');
+        var data = new FormData(form);
+
+        btn.disabled = true;
+        btn.textContent = 'Envoi en cours...';
+        result.textContent = '';
+
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: data
+        })
+        .then(function(response) { return response.json(); })
+        .then(function(json) {
+          if (json.success) {
+            result.style.color = '#1a7a3c';
+            result.textContent = 'Merci ! Votre demande a bien été envoyée, nous vous répondrons rapidement.';
+            form.reset();
+          } else {
+            result.style.color = '#c0392b';
+            result.textContent = 'Une erreur est survenue. Merci de réessayer ou de nous écrire directement à conciergeriebienvenue@gmail.com.';
+          }
+          btn.disabled = false;
+          btn.textContent = 'Envoyer ma demande';
+        })
+        .catch(function() {
+          result.style.color = '#c0392b';
+          result.textContent = 'Une erreur est survenue. Merci de réessayer ou de nous écrire directement à conciergeriebienvenue@gmail.com.';
+          btn.disabled = false;
+          btn.textContent = 'Envoyer ma demande';
+        });
       });
     </script>
   </div>
