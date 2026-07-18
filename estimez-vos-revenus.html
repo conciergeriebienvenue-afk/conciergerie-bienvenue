@@ -65,6 +65,10 @@
         <input type="email" id="email" name="email" required>
       </div>
       <div>
+        <label for="telephone">T&eacute;l&eacute;phone</label>
+        <input type="tel" id="telephone" name="telephone" required>
+      </div>
+      <div>
         <label for="ville">Commune du bien</label>
         <select id="ville" name="ville">
           <option value="Vannes">Vannes</option><option value="Arradon">Arradon</option><option value="Auray">Auray</option><option value="Baden">Baden</option><option value="Carnac">Carnac</option><option value="Crac'h">Crac'h</option><option value="La Trinité-sur-Mer">La Trinité-sur-Mer</option><option value="Larmor-Baden">Larmor-Baden</option><option value="Le Bono">Le Bono</option><option value="Locmariaquer">Locmariaquer</option><option value="Ploëmel">Ploëmel</option><option value="Saint-Philibert">Saint-Philibert</option>
@@ -74,15 +78,32 @@
         <label for="message">Votre logement (type, capacit&eacute;, particularit&eacute;s)</label>
         <textarea id="message" name="message"></textarea>
       </div>
+      <div>
+        <label for="antirobot">V&eacute;rification anti-robot &mdash; combien font <span id="captchaA">3</span> + <span id="captchaB">4</span>&nbsp;?</label>
+        <input type="text" id="antirobot" name="antirobot" inputmode="numeric" required>
+      </div>
       <button type="submit" class="btn" id="quoteSubmitBtn">Envoyer ma demande</button>
       <p id="quoteFormResult" style="margin-top:10px;font-weight:600;"></p>
     </form>
     <script>
+      var captchaA = Math.floor(Math.random() * 6) + 2;
+      var captchaB = Math.floor(Math.random() * 6) + 2;
+      document.getElementById('captchaA').textContent = captchaA;
+      document.getElementById('captchaB').textContent = captchaB;
+
       document.getElementById('quoteForm').addEventListener('submit', function(e) {
         e.preventDefault();
         var form = e.target;
         var btn = document.getElementById('quoteSubmitBtn');
         var result = document.getElementById('quoteFormResult');
+
+        var reponse = parseInt(document.getElementById('antirobot').value, 10);
+        if (reponse !== captchaA + captchaB) {
+          result.style.color = '#c0392b';
+          result.textContent = 'La r\u00e9ponse \u00e0 la v\u00e9rification anti-robot est incorrecte, merci de r\u00e9essayer.';
+          return;
+        }
+
         var data = new FormData(form);
 
         btn.disabled = true;
