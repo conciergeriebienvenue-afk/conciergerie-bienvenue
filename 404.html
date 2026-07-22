@@ -11,6 +11,40 @@
 <link rel="apple-touch-icon" href="/assets/logo.png">
 <meta name="theme-color" content="#0D0848">
 <link rel="stylesheet" href="/css/style.css">
+<script>
+(function() {
+  var path = decodeURIComponent(window.location.pathname).replace(/\/+$/, "");
+
+  var exact = {
+    "/vos-interlocuteurs.html": "/vos-interlocuteurs/",
+    "/nos-villes.html": "/nos-villes/",
+    "/estimez-vos-revenus.html": "/estimez-vos-revenus/",
+    "/mentions-legales.html": "/mentions-legales/",
+    "/les-demarches-pour-louer-sur-airbnb.html": "/les-demarches-pour-louer-sur-airbnb/",
+    "/les-démarches-pour-louer-sur-airbnb": "/les-demarches-pour-louer-sur-airbnb/",
+    "/les-démarches-pour-louer-sur-airbnb.html": "/les-demarches-pour-louer-sur-airbnb/",
+    "/informations-utiles/les-essentiels-pour-louer-sur-airbnb.html": "/informations-utiles/les-essentiels-pour-louer-sur-airbnb/",
+    "/comprendre-les-revenus": "/assets/documents/comprendre-les-revenus-airbnb.pdf",
+    "/comprendre-les-revenus.html": "/assets/documents/comprendre-les-revenus-airbnb.pdf",
+    "/nos-villes/vannes.html": "/nos-villes/vannes/",
+    "/nos-villes/arradon.html": "/nos-villes/arradon/",
+    "/nos-villes/auray.html": "/nos-villes/auray/",
+    "/nos-villes/baden.html": "/nos-villes/baden/",
+    "/nos-villes/carnac.html": "/nos-villes/carnac/",
+    "/nos-villes/crach.html": "/nos-villes/crach/",
+    "/nos-villes/la-trinite-sur-mer.html": "/nos-villes/la-trinite-sur-mer/",
+    "/nos-villes/larmor-baden.html": "/nos-villes/larmor-baden/",
+    "/nos-villes/le-bono.html": "/nos-villes/le-bono/",
+    "/nos-villes/locmariaquer.html": "/nos-villes/locmariaquer/",
+    "/nos-villes/ploemel.html": "/nos-villes/ploemel/",
+    "/nos-villes/saint-philibert.html": "/nos-villes/saint-philibert/"
+  };
+
+  if (exact[path]) {
+    window.location.replace(exact[path]);
+  }
+})();
+</script>
 </head>
 <body>
 <header class="site-header">
